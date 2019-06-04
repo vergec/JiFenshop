@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.jifenshop">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name=".application.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        tools:ignore="GoogleAppIndexingWarning"
+        android:theme="@style/AppTheme">
+        <activity android:name=".activity.sj_addjifengoods" />
+        <activity android:name=".activity.sj_shanpin_xiugai_jiage" />
+        <activity android:name=".activity.sj_addgoods" />
+        <activity android:name=".activity.sj_mygoods" />
+        <activity android:name=".activity.sj_guanli" />
+        <activity android:name=".activity.sj_dingdan" />
+        <activity android:name=".activity.gl_login" />
+        <activity android:name=".activity.sj_order" />
+        <activity android:name=".activity.sj_regist" />
+        <activity android:name=".activity.sj_login" />
+        <activity android:name=".activity.yh_regist" />
+        <activity android:name=".activity.zy_mainpage" />
+        <activity android:name=".activity.yh_login">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

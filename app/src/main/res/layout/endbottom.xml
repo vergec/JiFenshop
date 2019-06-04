@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/fl_main"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+    </FrameLayout>
+    <RadioGroup
+        android:id="@+id/rg_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rbhome"
+            android:drawableTop="@drawable/zhuye1"
+            android:gravity="center"
+            android:text="首页"
+            style="@style/bottom_tag_style"/>
+
+        <RadioButton
+            android:id="@+id/shop"
+            android:drawableTop="@drawable/store1"
+            android:gravity="center"
+            android:text="积分"
+            style="@style/bottom_tag_style"/>
+
+        <RadioButton
+            android:id="@+id/mine"
+            android:drawableTop="@drawable/uesr1"
+            android:gravity="center"
+            android:text="个人"
+            style="@style/bottom_tag_style"/>
+    </RadioGroup>
+</LinearLayout>

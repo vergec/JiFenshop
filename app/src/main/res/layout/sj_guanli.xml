@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="450dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorgery">
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/left"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="个人"
+            android:textSize="20dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="150dp"/>
+    </android.support.v7.widget.LinearLayoutCompat>
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/haed"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="40dp"/>
+            <android.support.v7.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/sname1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Jesica Vicente"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginLeft="40dp"
+                    android:textSize="30dp"
+                    android:textColor="@color/colorblack"/>
+            </android.support.v7.widget.LinearLayoutCompat>
+        </android.support.v7.widget.LinearLayoutCompat>
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="60dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="昵称"
+                android:layout_marginLeft="40dp"/>
+            <EditText
+                android:id="@+id/sname2"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:text="Jesica Vicente"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="40dp"/>
+        </android.support.v7.widget.LinearLayoutCompat>
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="60dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="密码"
+                android:layout_marginLeft="40dp"/>
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:text="18367835451"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="40dp"/>
+        </android.support.v7.widget.LinearLayoutCompat>
+    </android.support.v7.widget.LinearLayoutCompat>
+    <Button
+        android:id="@+id/change"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="260dp"
+        android:text="确认"
+        android:textColor="@color/white"
+        android:background="@color/colorOrange"/>
+</LinearLayout>
