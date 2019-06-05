@@ -8,4 +8,9 @@
     <string name="IDcard">身份证</string>
     <string name="password">密码</string>
     <string name="nichen">昵称</string>
+    <string name="coupon">优惠卷</string>
+    <string name="point">积分</string>
+    <string name="zhuye1">首页</string>
+    <string name="mine">我的</string>
+    <string name="all_order">全部订单</string>
 </resources>

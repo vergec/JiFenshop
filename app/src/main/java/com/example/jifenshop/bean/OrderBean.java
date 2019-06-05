@@ -3,7 +3,7 @@ package com.example.jifenshop.bean;
 import java.sql.Date;
 
 public class OrderBean {
-	private int oid;
+	private int id;
 	private int uid;
 	private int gid;
 	private String color;
@@ -13,10 +13,10 @@ public class OrderBean {
 	private Date odate;
 	private String okind;
 	public int getOid() {
-		return oid;
+		return id;
 	}
-	public void setOid(int oid) {
-		this.oid = oid;
+	public void setOid(int id) {
+		this.id = id;
 	}
 	public int getUid() {
 		return uid;

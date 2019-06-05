@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="4dp">
+
+    <ImageView
+        android:id="@+id/shop_goods_img"
+        android:layout_width="150dp"
+        android:layout_height="130dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/xiezi" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/shop_goods_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:text="NIKE 耐克官方AIR ZOOM PEGASUS35 男子跑步鞋回弹竞速"
+            android:textColor="@color/text" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:paddingTop="10dp"
+                android:text="￥"
+                android:textColor="@color/yellow" />
+
+            <TextView
+                android:id="@+id/shop_goods_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:text="1500"
+                android:textColor="@color/yellow" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/shop_goods_total_person"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:text="209人已兑换"
+            android:textColor="@color/text"
+            android:textSize="10dp" />
+
+        <Button
+            android:id="@+id/shop_goods_buy_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_style5"
+            android:text="查看详情"
+            android:textColor="@color/white" />
+    </LinearLayout>
+</LinearLayout>

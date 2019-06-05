@@ -1,4 +1,6 @@
 package com.example.jifenshop.activity;
+
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,6 +15,7 @@ import android.widget.Toast;
 
 import com.example.jifenshop.R;
 import com.example.jifenshop.bean.ResBean;
+import com.example.jifenshop.user.UserMainActivity;
 import com.example.jifenshop.util.OkHttpUtils;
 import com.google.gson.Gson;
 
@@ -33,6 +36,7 @@ public class yh_regist extends Activity {
     private EditText ucard;
     private EditText upassword;
     private ImageView back;
+    @SuppressLint("HandlerLeak")
     private Handler handler= new Handler(){
         @Override
         public void handleMessage(Message msg) {
@@ -43,7 +47,7 @@ public class yh_regist extends Activity {
             if (bean.getStatus()==1) {
                 Toast.makeText(yh_regist.this, "注册成功", Toast.LENGTH_LONG).show();
                 Intent intent = new Intent();
-                intent.setClass(yh_regist.this,MainActivity.class);
+                intent.setClass(yh_regist.this,UserMainActivity.class);
                 startActivity(intent);
                 finish();
             } else
@@ -65,7 +69,7 @@ public class yh_regist extends Activity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent();
-                intent.setClass(yh_regist.this,MainActivity.class);
+                intent.setClass(yh_regist.this, UserMainActivity.class);
                 startActivity(intent);
             }
         });
@@ -83,6 +87,7 @@ public class yh_regist extends Activity {
                 OkHttpUtils.getInstance().postDataAsyn(APIUtil.HOST_NAME + "/registered",map,new OkHttpUtils.MyNetCall(){
                     @Override
                     public void success(Call call, Response response) throws IOException {
+                        Log.i(APIUtil.TAG,"send request");
                         Message m = new Message();
                         m.obj = response.body().string();
                         handler.sendMessage(m);
@@ -90,7 +95,8 @@ public class yh_regist extends Activity {
 
                     @Override
                     public void failed(Call call, IOException e) {
-
+                        Log.i(APIUtil.TAG,"send request fail");
+                        e.printStackTrace();
                     }
                 });
             }

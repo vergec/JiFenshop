@@ -1,10 +1,14 @@
 package com.example.jifenshop.activity;
 
+import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -13,6 +17,7 @@ import android.widget.Toast;
 
 import com.example.jifenshop.R;
 import com.example.jifenshop.bean.ResBean;
+import com.example.jifenshop.user.UserMainActivity;
 import com.example.jifenshop.util.OkHttpUtils;
 import com.google.gson.Gson;
 
@@ -28,17 +33,23 @@ public class yh_login extends AppCompatActivity {
     private EditText uphone;
     private EditText upassword;
     private TextView s_login;
+    @SuppressLint("HandlerLeak")
     private Handler handler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
             super.handleMessage(msg);
+            Log.i(APIUtil.TAG, "handleMessage: start hand message");
             String response = (String) msg.obj;
             Gson gson = new Gson();
             com.example.jifenshop.bean.ResBean rm = gson.fromJson(response, ResBean.class);
             if (rm.getStatus() == 1) {
                 Toast.makeText(yh_login.this, "登录成功", Toast.LENGTH_LONG).show();
                 Intent intent = new Intent();
-                intent.setClass(yh_login.this, zy_mainpage.class);
+                intent.setClass(yh_login.this, UserMainActivity.class);
+                SharedPreferences userInfo = getSharedPreferences("userInfo", Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor = userInfo.edit();
+                editor.putString("uphone",uphone.getText().toString());
+                editor.apply();
                 startActivity(intent);
                 finish();
             } else
@@ -75,14 +86,13 @@ public class yh_login extends AppCompatActivity {
             public void onClick(View v) {
                 String Uname = uphone.getText().toString();
                 String Password = upassword.getText().toString();
-                if (Uname.equals("")) {
-                    Toast.makeText(yh_login.this, "账号不能为空", Toast.LENGTH_LONG).show();
-                    //Toast.makeText(MainActivity.this, Password, Toast.LENGTH_LONG).show();
-                } else if (Uname.length() != 11) {
-                    Toast.makeText(yh_login.this, "手机号应为11位", Toast.LENGTH_LONG).show();
-                } else if (Password.equals("")) {
-                    Toast.makeText(yh_login.this, "密码不能为空", Toast.LENGTH_LONG).show();
-                } else {
+//                if (Uname.equals("")) {
+//                    Toast.makeText(yh_login.this, "账号不能为空", Toast.LENGTH_LONG).show();
+//                } else if (Uname.length() != 11) {
+//                    Toast.makeText(yh_login.this, "手机号应为11位", Toast.LENGTH_LONG).show();
+//                } else if (Password.equals("")) {
+//                    Toast.makeText(yh_login.this, "密码不能为空", Toast.LENGTH_LONG).show();
+//                } else {
                     HashMap<String, String> map = new HashMap<>();
                     map.put("uphone", Uname);
                     map.put("upassword", Password);
@@ -96,10 +106,11 @@ public class yh_login extends AppCompatActivity {
 
                         @Override
                         public void failed(Call call, IOException e) {
-
+                            Log.i(APIUtil.TAG, "failed: ");
+                            e.printStackTrace();
                         }
                     });
-                };
+//                };
             }
         });
     }

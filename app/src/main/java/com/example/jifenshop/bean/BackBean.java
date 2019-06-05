@@ -2,7 +2,7 @@ package com.example.jifenshop.bean;
 
 public class BackBean {
 	private int bid;
-	private int oid;
+	private int id;
 	private String bkind;
 	private String reason;
 	public int getBid() {
@@ -12,10 +12,10 @@ public class BackBean {
 		this.bid = bid;
 	}
 	public int getOid() {
-		return oid;
+		return id;
 	}
-	public void setOid(int oid) {
-		this.oid = oid;
+	public void setOid(int id) {
+		this.id = id;
 	}
 	public String getBkind() {
 		return bkind;

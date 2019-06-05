@@ -84,7 +84,6 @@ public class sj_login extends AppCompatActivity {
                 String Password = spassword.getText().toString();
                 if (Uname.equals("")) {
                     Toast.makeText(sj_login.this, "账号不能为空", Toast.LENGTH_LONG).show();
-                    //Toast.makeText(MainActivity.this, Password, Toast.LENGTH_LONG).show();
                 } else if (Uname.length() != 11) {
                     Toast.makeText(sj_login.this, "手机号应为11位", Toast.LENGTH_LONG).show();
                 } else if (Password.equals("")) {

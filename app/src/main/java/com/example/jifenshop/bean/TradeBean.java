@@ -3,7 +3,7 @@ package com.example.jifenshop.bean;
 public class TradeBean {
 	private int tid;
 	private int sid;
-	private int oid;
+	private int id;
 	public int getTid() {
 		return tid;
 	}
@@ -17,10 +17,10 @@ public class TradeBean {
 		this.sid = sid;
 	}
 	public int getOid() {
-		return oid;
+		return id;
 	}
-	public void setOid(int oid) {
-		this.oid = oid;
+	public void setOid(int id) {
+		this.id = id;
 	}
 
 }

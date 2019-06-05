@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".user.fragment.MineFragment">
 
     <android.support.v7.widget.LinearLayoutCompat
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="200dp"
         android:background="@drawable/background2"
         android:orientation="vertical">
@@ -14,49 +17,47 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="我的"
-                android:textSize="20dp"
-                android:textColor="@color/white"
+                android:paddingLeft="10dp"
                 android:paddingTop="10dp"
-                android:paddingLeft="10dp"/>
-            <ImageView
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_marginLeft="270dp"
-                android:layout_marginTop="10dp"
-                android:src="@drawable/list"/>
+                android:text="我的"
+                android:textColor="@color/white"
+                android:textSize="20dp" />
+
         </android.support.v7.widget.LinearLayoutCompat>
 
         <android.support.v7.widget.LinearLayoutCompat
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:layout_marginLeft="5dp"
             android:layout_marginTop="10dp"
-            android:layout_marginLeft="5dp">
+            android:orientation="horizontal">
 
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/haed"
                 android:layout_gravity="center"
                 android:layout_marginLeft="25dp"
-                android:layout_marginTop="5dp"/>
+                android:layout_marginTop="5dp"
+                android:src="@drawable/haed" />
+
             <android.support.v7.widget.LinearLayoutCompat
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="20dp">
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/user_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
                     android:text="JesicaVicente"
                     android:textColor="@color/colorwhite"
-                    android:textSize="30dp"
-                    android:layout_marginLeft="30dp"/>
+                    android:textSize="30dp" />
 
                 <android.support.v7.widget.LinearLayoutCompat
                     android:layout_width="wrap_content"
@@ -66,16 +67,17 @@
                     <ImageView
                         android:layout_width="20dp"
                         android:layout_height="20dp"
-                        android:src="@drawable/phone"
-                        android:layout_marginLeft="50dp"/>
+                        android:layout_marginLeft="50dp"
+                        android:src="@drawable/phone" />
 
                     <TextView
+                        android:id="@+id/user_phone"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
+                        android:layout_marginLeft="20dp"
                         android:text="183******51"
-                        android:textColor="@color/colorwhite"
-                        android:layout_marginLeft="20dp"/>
+                        android:textColor="@color/colorwhite" />
 
                 </android.support.v7.widget.LinearLayoutCompat>
 
@@ -88,200 +90,238 @@
     <android.support.v7.widget.LinearLayoutCompat
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
 
         <android.support.v7.widget.LinearLayoutCompat
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:layout_gravity="center"
-            android:layout_marginLeft="50dp">
+            android:layout_marginLeft="50dp"
+            android:orientation="vertical">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="0.00元"
-                android:textColor="@color/colorblack"
-                android:gravity="center" />
+                android:textColor="@color/colorblack" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/colorblack"
-                android:text="钱包"/>
+                android:text="钱包"
+                android:textColor="@color/colorblack" />
         </android.support.v7.widget.LinearLayoutCompat>
+
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/fenge"
-            android:layout_marginLeft="50dp"/>
+            android:layout_marginLeft="50dp"
+            android:src="@drawable/fenge" />
 
         <android.support.v7.widget.LinearLayoutCompat
+            android:id="@+id/user_coupon_ll"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:layout_gravity="center"
-            android:layout_marginLeft="50dp">
+            android:layout_marginLeft="50dp"
+            android:orientation="vertical">
+
             <TextView
+                android:id="@+id/user_coupon_num"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="2个"
-                android:textColor="@color/colorblack"
-                android:gravity="center" />
+                android:textColor="@color/colorblack" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/colorblack"
-                android:text="优惠券"/>
+                android:text="优惠券"
+                android:textColor="@color/colorblack" />
         </android.support.v7.widget.LinearLayoutCompat>
+
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/fenge"
-            android:layout_marginLeft="50dp"/>
+            android:layout_marginLeft="50dp"
+            android:src="@drawable/fenge" />
 
 
         <android.support.v7.widget.LinearLayoutCompat
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:layout_gravity="center"
-            android:layout_marginLeft="50dp">
+            android:layout_marginLeft="50dp"
+            android:orientation="vertical">
+
             <TextView
+                android:id="@+id/user_integral_num"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="600"
-                android:textColor="@color/colorblack"
-                android:gravity="center" />
+                android:textColor="@color/colorblack" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/colorblack"
-                android:text="积分"/>
+                android:text="积分"
+                android:textColor="@color/colorblack" />
         </android.support.v7.widget.LinearLayoutCompat>
     </android.support.v7.widget.LinearLayoutCompat>
+
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_alignParentBottom="true"
-        android:background="@color/xianduan"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="10dp"
+        android:background="@color/xianduan" />
+
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_alignParentBottom="true"
-        android:background="@color/xianduan"
-        android:layout_marginTop="5dp"/>
+        android:layout_marginTop="5dp"
+        android:background="@color/xianduan" />
+
     <android.support.v7.widget.LinearLayoutCompat
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+
         <android.support.v7.widget.LinearLayoutCompat
+            android:id="@+id/user_not_paying_order"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:layout_marginLeft="40dp"
             android:layout_marginTop="20dp"
-            android:layout_marginLeft="40dp">
+            android:orientation="vertical">
+
             <ImageView
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:src="@drawable/daifukuan"/>
+                android:src="@drawable/daifukuan" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="待付款"/>
+                android:text="待付款" />
         </android.support.v7.widget.LinearLayoutCompat>
 
         <android.support.v7.widget.LinearLayoutCompat
+            android:id="@+id/user_wait_send_order"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:layout_marginLeft="60dp"
             android:layout_marginTop="20dp"
-            android:layout_marginLeft="60dp">
+            android:orientation="vertical">
+
             <ImageView
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:src="@drawable/daifahuo"/>
+                android:src="@drawable/daifahuo" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="待发货"/>
+                android:text="待发货" />
         </android.support.v7.widget.LinearLayoutCompat>
 
         <android.support.v7.widget.LinearLayoutCompat
+            android:id="@+id/user_wait_receive_order"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:layout_marginLeft="60dp"
             android:layout_marginTop="20dp"
-            android:layout_marginLeft="60dp">
+            android:orientation="vertical">
+
             <ImageView
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:src="@drawable/daishouhuo"/>
+                android:src="@drawable/daishouhuo" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="待收货"/>
+                android:text="待收货" />
         </android.support.v7.widget.LinearLayoutCompat>
+
         <android.support.v7.widget.LinearLayoutCompat
+            android:id="@+id/user_wait_evaluation_order"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:layout_marginLeft="60dp"
             android:layout_marginTop="20dp"
-            android:layout_marginLeft="60dp">
+            android:orientation="vertical">
+
             <ImageView
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:src="@drawable/daipingjia"/>
+                android:src="@drawable/daipingjia" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="待评价"/>
+                android:text="待评价" />
         </android.support.v7.widget.LinearLayoutCompat>
 
     </android.support.v7.widget.LinearLayoutCompat>
+
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_alignParentBottom="true"
-        android:background="@color/xianduan"
-        android:layout_marginTop="10dp"/> <View
-    android:layout_width="match_parent"
-    android:layout_height="1dp"
-    android:layout_alignParentBottom="true"
-    android:background="@color/xianduan"
-    android:layout_marginTop="5dp"/>
+        android:layout_marginTop="10dp"
+        android:background="@color/xianduan" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="5dp"
+        android:background="@color/xianduan" />
 
     <android.support.v7.widget.LinearLayoutCompat
+        android:id="@+id/user_collection"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="10dp">
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
         <ImageView
             android:layout_width="35dp"
             android:layout_height="35dp"
-            android:src="@drawable/xin"
-            android:layout_marginLeft="20dp"/>
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/xin" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="我的收藏"
-            android:layout_marginTop="5dp"
             android:layout_marginLeft="10dp"
-            android:textSize="20dp"/>
+            android:layout_marginTop="5dp"
+            android:text="我的收藏"
+            android:textSize="20dp" />
     </android.support.v7.widget.LinearLayoutCompat>
+
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_alignParentBottom="true"
-        android:background="@color/xianduan"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="10dp"
+        android:background="@color/xianduan" />
+
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_alignParentBottom="true"
-        android:background="@color/xianduan"
-        android:layout_marginTop="5dp"/>
+        android:layout_marginTop="5dp"
+        android:background="@color/xianduan" />
+
     <android.support.v7.widget.LinearLayoutCompat
+        android:id="@+id/user_info"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingTop="10dp">
@@ -289,38 +329,19 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
             android:text="我的信息"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="20dp"
-            android:textSize="20dp"/>
+            android:textSize="20dp" />
+
         <ImageView
             android:layout_width="20dp"
             android:layout_height="20dp"
-            android:src="@drawable/right"
             android:layout_marginLeft="270dp"
-            android:layout_marginTop="10dp"/>
-    </android.support.v7.widget.LinearLayoutCompat>
-
-    <android.support.v7.widget.LinearLayoutCompat
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="我的足迹"
             android:layout_marginTop="10dp"
-            android:layout_marginLeft="20dp"
-            android:textSize="20dp"/>
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:src="@drawable/right"
-            android:layout_marginLeft="270dp"
-            android:layout_marginTop="10dp"/>
+            android:src="@drawable/right" />
     </android.support.v7.widget.LinearLayoutCompat>
-    <include layout="@layout/endbottom" />
+
+
+
 </LinearLayout>
-
-

@@ -7,6 +7,7 @@
     <color name="text">#3C3C3C</color>
     <color name="back">#E4E4E4</color>
     <color name="blue">#03A9F4</color>
+    <color name="split_line">#e2e2e2</color>
     <color name="xianduan">#969696</color>
     <color name="red">#FF0000</color>
     <color name="pink">#FED3DD</color>
@@ -16,4 +17,5 @@
     <color name="colorblack">#000000</color>
     <color name="colorgery">#F2F2F2</color>
     <color name="colorred">#ff0000</color>
+    <color name="tabbar_color">#AAAAAA</color>
 </resources>

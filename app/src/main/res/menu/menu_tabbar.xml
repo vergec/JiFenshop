@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/tabbar_home"
+        android:icon="@drawable/zhuye1"
+        android:title="@string/zhuye1"/>
+
+    <item
+        android:id="@+id/tabbar_shop"
+        android:icon="@drawable/store1"
+        android:title="@string/point"/>
+
+    <item
+        android:id="@+id/tabbar_mine"
+        android:icon="@drawable/uesr1"
+        android:title="@string/mine"/>
+
+</menu>
